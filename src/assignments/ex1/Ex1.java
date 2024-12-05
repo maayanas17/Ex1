@@ -47,19 +47,21 @@ public class Ex1 {
          * @return a String representing a number (in base) equals to num, or an empty String (in case of wrong input).
          */
         public static String int2Number(int num, int base) {
-            String ans = "",ans1="";
-            int j=0;
+            String ans = "";
+            int remainder;
             if (num<0 || base<2 || base>16)
                 return ans;
-            while(num>0)
-            {
-                ans=ans+Integer.toString(num%base);
+            if (num==0)
+                return "0";
+            while(num>0) {
+                remainder = num % base;
+                if (remainder >= 10)
+                    ans = (char) ('A' + (remainder - 10)) + ans;
+                else
+                    ans = remainder + ans;
                 num=num/base;
             }
-            for (int i = ans.length() - 1; i >= 0; i--) {
-                ans1 += ans.charAt(i);
-            }
-            return ans1;
+            return ans;
         }
 
 
