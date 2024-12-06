@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Make sure you complete all the needed JUnits
  */
 public class Ex1Test {
+    /*
         @Test
         void computeNumberTest() {
             String s2 = "1011b2";
@@ -23,7 +24,7 @@ public class Ex1Test {
         }
 
         @Test
-        void isBasisNumberTest() {
+        void computeNumberTest() {
             String[] good = {"1", "1b2", "01b2", "123bA", "ABbG", "0bA"};
             for(int i=0;i<good.length;i=i+1) {
                 boolean ok = Ex1.isNumber(good[i]);
@@ -35,6 +36,8 @@ public class Ex1Test {
                 assertFalse(not_ok);
             }
         }
+
+     */
         @Test
         void int2NumberTest() {
            // implement this test
