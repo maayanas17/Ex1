@@ -32,12 +32,34 @@ public class Ex1 {
          */
         public static boolean isNumber(String a) {
             boolean ans = true;
-            // add your code here
-
-            ////////////////////
-            return ans;
+            if (a==null||a=="")
+                return false;
+            if (a.contains(String.valueOf('b')))
+            {
+                if ((a.indexOf('b')==a.length()-1)||(a.indexOf('b')==0))
+                    return false;
+                if (a.indexOf('b')+1!=a.length()-1)
+                    return false;
+                char base=a.charAt(a.indexOf('b')+1);
+                if ('2'>base||(base>'9'&&'A'>base)||base >'G')
+                    return false;
+                for (int i=0;i<a.indexOf('b');i++)
+                    if (('0'<=a.charAt(i)&&a.charAt(i)<base)||(a.charAt(i)>='A'&&a.charAt(i)<base))
+                        ans = true;
+                    else
+                        return false;
+                return ans;
+            }
+            else
+            {
+                for (int c=0;c<a.length()-1;c++)
+                {
+                    if ('0'>a.charAt(c)|| a.charAt(c)>'9')
+                        return false;
+                }
+                return ans;
+            }
         }
-
         /**
          * Calculate the number representation (in basis base)
          * of the given natural number (represented as an integer).
