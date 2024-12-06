@@ -109,10 +109,11 @@ public class Ex1 {
          */
         public static boolean equals(String n1, String n2) {
             boolean ans = true;
-            // add your code here
-
-            ////////////////////
-            return ans;
+            int n1Int=number2Int(n1);
+            int n2Int=number2Int(n2);
+            if (n1Int==n2Int)
+                return ans;
+            return !ans;
         }
 
         /**
