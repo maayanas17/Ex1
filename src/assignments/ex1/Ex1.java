@@ -85,18 +85,32 @@ public class Ex1 {
         public static String int2Number(int num, int base) {
             String ans = "";
             int remainder;
-            if (num<0 || base<2 || base>16)
+            if (num < 0 || base < 2 || base > 16)
                 return ans;
-            if (num==0)
+            if (num == 0)
+            {
+                if (base != 10) {
+                    if (base >= 2 && base <= 9)
+                        return "0b" + base;
+                    else
+                        return "0b" + (char) ('A' + (base - 10));
+                }
                 return "0";
-            while(num>0) {
+            }
+            while (num > 0) {
                 remainder = num % base;
                 if (remainder >= 10)
                     ans = (char) ('A' + (remainder - 10)) + ans;
                 else
                     ans = remainder + ans;
-                num=num/base;
+                num = num / base;
             }
+            if (base != 10) {
+                if (base >= 2 && base <= 9)
+                    ans = ans + "b" + base;
+                else
+                    ans = ans + "b" + (char) ('A' + (base - 10));
+                }
             return ans;
         }
 
