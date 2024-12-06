@@ -125,10 +125,16 @@ public class Ex1 {
          *
          */
         public static int maxIndex(String[] arr) {
-            int ans = 0;
-            // add your code here
-
-            ////////////////////
+            int ans = 0,max=0;
+            String maxStr;
+            for(int i=0;i< arr.length;i++)
+            {
+                if(number2Int(arr[i])>max)
+                {
+                    max=number2Int(arr[i]);
+                    ans=i;
+                }
+            }
             return ans;
         }
 }
