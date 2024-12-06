@@ -19,10 +19,24 @@ public class Ex1 {
          * @return
          */
         public static int number2Int(String num) {
+            int base=10,indexLastChar,power,digit;
             int ans = -1;
-            // add your code here
-
-            ////////////////////
+            if (isNumber(num)) {
+                ans=0;
+                if (num.contains(String.valueOf('b')))
+                {
+                    base=Character.getNumericValue(num.charAt(num.length()-1));
+                    num=num.substring(0,num.length()-2);
+                }
+                indexLastChar=num.length()-1;
+                for(int i=0;i<num.length();i++)
+                {
+                    power=Math.abs(i-indexLastChar);
+                    digit=Character.getNumericValue(num.charAt(i));
+                    ans+=(int)digit*Math.pow((double)base,(double)power);
+                }
+                return ans;
+            }
             return ans;
         }
         /**
@@ -32,7 +46,7 @@ public class Ex1 {
          */
         public static boolean isNumber(String a) {
             boolean ans = true;
-            if (a==null||a=="")
+            if (a==null||a.isEmpty())
                 return false;
             if (a.contains(String.valueOf('b')))
             {
