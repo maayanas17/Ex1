@@ -35,8 +35,7 @@ public class Ex1Main {
             else
                 break;
             System.out.println("Enter a base for output: (a number [2,16]");
-            Scanner scanner = new Scanner(System.in);
-            base= scanner.nextInt();
+            base= sc.nextInt();
             if (base<2|| base>16)
                 System.out.println("ERR: wrong base, should be [2,16], got ("+base+")");
             else
