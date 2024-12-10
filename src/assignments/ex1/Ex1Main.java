@@ -36,6 +36,8 @@ public class Ex1Main {
                     continue;
                 }
             }
+            else
+                break;
             System.out.println("Enter a base for output: (a number [2,16]");
             base= sc.nextInt();
             if (base<2|| base>16)
