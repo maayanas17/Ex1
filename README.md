@@ -12,3 +12,21 @@ This project has 3 parts:
   The program receives two numbers in string format and checks that they are in a valid format. It later calculates the sum and mul(product) of the two numbers and displays the results in the base that was given by the user (between 2 and 16).
   After that,The program finds the largest number of the two numbers and the results of the sum and product, and displays it. The program runs until the user enters the word "quit", which means the program is terminated.
  
+# Assignment 1 - ID: 216114744
+
+## Overview
+This project consists of three main parts:
+1. **Tests**: Unit tests for various functions in `Ex1.java` to ensure they work as expected.
+2. **Functions**: The implementation of several utility functions in `Ex1.java`.
+3. **Main Code**: The program in `Ex1.Main.java` that processes numbers in string format, performs calculations, and displays results in various bases.
+
+## Functions in `Ex1.java`
+
+1. **`number2Int(String num)`**
+   - Converts a number in string format to decimal (int) format.
+   - Returns `-1` if the input is not in a valid format.
+
+   **Example:**
+   ```java
+   number2Int("123"); // returns 123
+   number2Int("abc"); // returns -1
