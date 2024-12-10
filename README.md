@@ -16,7 +16,7 @@ This project has 3 parts:
 
 ## Overview
 This project consists of three main parts:
-1. **Tests**: Unit tests for various functions in `Ex1.java` to ensure they work as expected.
+1. **Tests**: Unit tests for the various functions in `Ex1.java` to ensure they work as expected.
 2. **Functions**: The implementation of several utility functions in `Ex1.java`.
 3. **Main Code**: The program in `Ex1.Main.java` that processes numbers in string format, performs calculations, and displays results in various bases.
 
@@ -30,3 +30,16 @@ This project consists of three main parts:
    ```java
    number2Int("123"); // returns 123
    number2Int("abc"); // returns -1
+2.**`isNumber(String a)`**
+  -the function checks if the given string is in a valid number format. The string should be in the format "<number><b><base>" or only digits(therefore it is in the base 10)
+   **Example:**
+   ```java
+  isNumber("123"); // returns true
+  isNumber("12a"); // returns false
+3.**`int2Number(int num, int base)`**
+  -converts from an integer to a number format in the given selected base system (between 2 and 16). If the number or base is invalid , the function returns an empty string.
+   **Example:**
+   ```java
+    int2Number(255, 16); // returns "FF"
+    int2Number(10, 2); // returns "1010b2"
+
