@@ -31,11 +31,11 @@ public class Ex1Main {
             num2 = sc.next();
             if (!num2.equals("quit")) {
                 System.out.println("num2= "+num2+" is number: "+Ex1.isNumber(num2)+" , value: "+Ex1.number2Int(num2));
-                if(!Ex1.isNumber(num2))
-                    System.out.println("ERR: num2 is in the wrong format! ("+num2+")");
+                if(!Ex1.isNumber(num2)) {
+                    System.out.println("ERR: num2 is in the wrong format! (" + num2 + ")");
+                    continue;
+                }
             }
-            else
-                break;
             System.out.println("Enter a base for output: (a number [2,16]");
             base= sc.nextInt();
             if (base<2|| base>16)
