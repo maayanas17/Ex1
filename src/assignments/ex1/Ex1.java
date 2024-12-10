@@ -19,25 +19,26 @@ public class Ex1 {
          * @return
          */
         public static int number2Int(String num) {
-            int base=10,indexLastChar,power,digit;
-            int ans = -1;
-            if (isNumber(num)) {
+            int base=10,indexLastChar,power,digit;// base is 10
+            int ans = -1;// Default answer is -1 (invalid)
+            if (isNumber(num)) // if the number is in a valid format
+            {
                 ans=0;
-                if (num.contains(String.valueOf('b')))
+                if (num.contains(String.valueOf('b'))) // If the number contains 'b', the code will extract the base
                 {
-                    base=Character.getNumericValue(num.charAt(num.length()-1));
-                    num=num.substring(0,num.length()-2);
+                    base=Character.getNumericValue(num.charAt(num.length()-1));// Get the base as an integer
+                    num=num.substring(0,num.length()-2);//extract only the number
                 }
                 indexLastChar=num.length()-1;
                 for(int i=0;i<num.length();i++)
                 {
-                    power=Math.abs(i-indexLastChar);
-                    digit=Character.getNumericValue(num.charAt(i));
-                    ans+=(int)digit*Math.pow((double)base,(double)power);
+                    power=Math.abs(i-indexLastChar); // Calculate the power of the base
+                    digit=Character.getNumericValue(num.charAt(i));// Get numeric value of the character
+                    ans+=(int)digit*Math.pow((double)base,(double)power);// Add to the result
                 }
-                return ans;
+                return ans;// Return the decimal representation
             }
-            return ans;
+            return ans;// Return -1 if the number is invalid
         }
         /**
          * This static function checks if the given String (g) is in a valid "number" format.
@@ -46,18 +47,18 @@ public class Ex1 {
          */
         public static boolean isNumber(String a) {
             boolean ans = true;
-            if (a==null||a.isEmpty())
+            if (a==null||a.isEmpty())  //null or empty input
                 return false;
-            if (a.contains(String.valueOf('b')))
+            if (a.contains(String.valueOf('b')))//if the string contains 'b'
             {
-                if ((a.indexOf('b')==a.length()-1)||(a.indexOf('b')==0))
+                if ((a.indexOf('b')==a.length()-1)||(a.indexOf('b')==0))//if the 'b' is in the end of the string or in the start
                     return false;
-                if (a.indexOf('b')+1!=a.length()-1)
+                if (a.indexOf('b')+1!=a.length()-1)//if there is only one Char after b
                     return false;
-                char base=a.charAt(a.indexOf('b')+1);
-                if ('2'>base||(base>'9'&&'A'>base)||base >'G')
+                char base=a.charAt(a.indexOf('b')+1);// Get the base char
+                if ('2'>base||(base>'9'&&'A'>base)||base >'G')//if the base is illegal
                     return false;
-                for (int i=0;i<a.indexOf('b');i++)
+                for (int i=0;i<a.indexOf('b');i++) // Validate all characters before 'b' based on the base
                     if (('0'<=a.charAt(i)&&a.charAt(i)<base)||(a.charAt(i)>='A'&&a.charAt(i)<base))
                         ans = true;
                     else
@@ -66,7 +67,7 @@ public class Ex1 {
             }
             else
             {
-                for (int c=0;c<a.length()-1;c++)
+                for (int c=0;c<a.length();c++)// Validate regular numbers (must contain only digits)
                 {
                     if ('0'>a.charAt(c)|| a.charAt(c)>'9')
                         return false;
@@ -83,26 +84,26 @@ public class Ex1 {
          * @return a String representing a number (in base) equals to num, or an empty String (in case of wrong input).
          */
         public static String int2Number(int num, int base) {
-            String ans = "";
+            String ans = "";// Initialize result as an empty string
             int remainder;
-            if (num < 0 || base < 2 || base > 16)
+            if (num < 0 || base < 2 || base > 16) //invalid inputs
                 return ans;
             if (num == 0)
             {
                 if (base != 10) {
                     if (base >= 2 && base <= 9)
-                        return "0b" + base;
+                        return "0b" + base;// bases 2-9
                     else
-                        return "0b" + (char) ('A' + (base - 10));
+                        return "0b" + (char) ('A' + (base - 10));// bases A-G
                 }
-                return "0";
+                return "0";// Decimal
             }
             while (num > 0) {
                 remainder = num % base;
                 if (remainder >= 10)
-                    ans = (char) ('A' + (remainder - 10)) + ans;
+                    ans = (char) ('A' + (remainder - 10)) + ans;//// Add the remainder as a digit and convert remainders >= 10 to A-G
                 else
-                    ans = remainder + ans;
+                    ans = remainder + ans;// Add the remainder as a digit
                 num = num / base;
             }
             if (base != 10) {
@@ -111,7 +112,7 @@ public class Ex1 {
                 else
                     ans = ans + "b" + (char) ('A' + (base - 10));
                 }
-            return ans;
+            return ans;// Return the formatted number
         }
 
 
@@ -123,8 +124,8 @@ public class Ex1 {
          */
         public static boolean equals(String n1, String n2) {
             boolean ans = true;
-            int n1Int=number2Int(n1);
-            int n2Int=number2Int(n2);
+            int n1Int=number2Int(n1);// Convert first number to decimal
+            int n2Int=number2Int(n2);// Convert second number to decimal
             if (n1Int==n2Int)
                 return ans;
             return !ans;
@@ -143,12 +144,12 @@ public class Ex1 {
             String maxStr;
             for(int i=0;i< arr.length;i++)
             {
-                if(number2Int(arr[i])>max)
+                if(number2Int(arr[i])>max)// Update max and index if a larger value is found
                 {
-                    max=number2Int(arr[i]);
+                    max=number2Int(arr[i]);//Convert current number to decimal
                     ans=i;
                 }
             }
-            return ans;
+            return ans;// Return the index of the largest number
         }
 }

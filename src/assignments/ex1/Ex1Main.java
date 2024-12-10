@@ -10,14 +10,15 @@ public class Ex1Main {
         Scanner sc = new Scanner(System.in);
         String num1 = "", num2="", quit = "quit";
         int base,sum,mul;
-        while (!num1.equals(quit) && !num2.equals(quit)) {
+        while (!num1.equals(quit) && !num2.equals(quit))//The loop will continue as long as the user has not entered "quit" on one of the inputs.
+        {
             System.out.println();
             System.out.println("Ex1 class solution:");
             System.out.println("Enter a string as number#1 (or \"quit\" to end the program): ");
             num1 = sc.next();
             if (!num1.equals("quit")) {
                 System.out.println("num1= "+num1+" is number: "+Ex1.isNumber(num1)+" , value: "+Ex1.number2Int(num1));
-                if(!Ex1.isNumber(num1))
+                if(!Ex1.isNumber(num1))//If the format is incorrect, an error message is printed and the loop returns to the beginning.
                 {
                     System.out.println("ERR: num1 is in the wrong format! ("+num1+")");
                     continue;
