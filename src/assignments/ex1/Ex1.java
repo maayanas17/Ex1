@@ -2,7 +2,6 @@ package assignments.ex1;
 /**
  * My ID is 2116114744
  * This class represents a simple solution for Ex1.
- * As defined here: https://docs.google.com/document/d/1AJ9wtnL1qdEs4DAKqBlO1bXCM6r6GJ_J/r/edit/edit
  * In this assignment, I will design a number formatting converter and calculator.
  * In general, I will use Strings as numbers over basis of binary till Hexa.
  * [2-16], 10-16 are represented by A,B,..G.
