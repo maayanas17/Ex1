@@ -54,7 +54,7 @@ public class Ex1 {
             {
                 if ((a.indexOf('b')==a.length()-1)||(a.indexOf('b')==0))//if the 'b' is in the end of the string or in the start
                     return false;
-                if (a.indexOf('b')+1!=a.length()-1)//if there is only one Char after b
+                if (a.indexOf('b')+1!=a.length()-1)//if there is not only one Char after b
                     return false;
                 char base=a.charAt(a.indexOf('b')+1);// Get the base char
                 if ('2'>base||(base>'9'&&'A'>base)||base >'G')//if the base is illegal
