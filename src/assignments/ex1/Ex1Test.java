@@ -53,6 +53,8 @@ public class Ex1Test {
             assertFalse(Ex1.isNumber("3b3"));
             assertFalse(Ex1.isNumber("-3b5"));
             assertFalse(Ex1.isNumber("3 b4"));
+            assertFalse(Ex1.isNumber("1234 5"));
+            assertFalse(Ex1.isNumber("123 4"));
             assertFalse(Ex1.isNumber("GbG"));
             assertFalse(Ex1.isNumber("1b10"));
             assertFalse(Ex1.isNumber("1bH"));
