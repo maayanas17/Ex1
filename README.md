@@ -34,5 +34,5 @@ This project has 3 parts:
 3. **Main Code: Ex1.Main.java**
    - The program receives two numbers in string number format and checks that they are in a valid format.  
    - It later calculates the sum and product of the two numbers and displays the results in the base that was given by the user (between 2 and 16).  
-   - After that, the program finds the largest number of the two numbers and the results of the sum and product, and displays it in the given base.  
+   - After that, the program finds the largest number of the two numbers and the results of the sum and product, and displays it in the given base in the number format.  
    - The program runs until the user enters the word "quit", which means the program is terminated.
