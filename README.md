@@ -25,7 +25,10 @@ This project has 3 parts:
      The function gets an array that contains strings in this number format or only digits (therefore in base 10)  
      and returns the index of the greatest number.  
      If none is valid, it returns `0`.
-
+     Examples:
+     (1)  for arr1 = {"111b2", "11", "23AbG", "9b10"}-> 2
+     (2) for arr5 = {null,"123bH"}->0
+     
    - **`equals(String n1, String n2)`**  
      The function gets 2 strings in this number format or only digits (therefore in base 10) or both  
      and returns `true` if both numbers are equal.  
