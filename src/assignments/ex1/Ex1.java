@@ -125,6 +125,8 @@ public class Ex1 {
             boolean ans = true;
             int n1Int=number2Int(n1);// Convert first number to decimal
             int n2Int=number2Int(n2);// Convert second number to decimal
+            if (n1Int==-1||n2Int==-1)
+                return false;
             if (n1Int==n2Int)
                 return ans;
             return !ans;

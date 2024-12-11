@@ -132,7 +132,7 @@ public class Ex1Test {
             assertFalse(Ex1.equals("132b3","66b7"));
             assertFalse(Ex1.equals("122b3","6611b7"));
             assertFalse(Ex1.equals("132bG","6611b7"));
-            assertFalse(Ex1.equals("13HbG","6611b7"));
+            assertFalse(Ex1.equals("13HbG","66191b7"));//assume that the function return false if one or more of either numbers is invalid
             assertFalse(Ex1.equals("13bH","6611b7"));
             assertTrue(Ex1.equals("1b2", "1"));
 
