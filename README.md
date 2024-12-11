@@ -4,8 +4,8 @@
 This project has 3 parts:
 
 1. **Tests: Ex1.Test.java**
-   - This code provides unit tests for the various functions in `Ex1` to make sure that they work well.
-   - Each function tests the function's operation on a variety of possible inputs, including valid and invalid inputs.
+   - This code provides junit tests for the various functions in `Ex1.java` to make sure that they work well.
+   - Each one of functions test the function's operation on a variety of possible inputs, including valid and invalid inputs.
 
 2. **Functions: Ex1.java**
 
