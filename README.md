@@ -31,7 +31,7 @@ This project has 3 parts:
      and returns `true` if both numbers are equal.  
      Otherwise, it returns `false`.
      examples:
-     Ex1.equals("101b2","5")-> return true
+     -Ex1.equals("101b2","5")-> return true
 
 3. **Main Code: Ex1.Main.java**
    - The program receives two numbers in string number format and checks that they are in a valid format.  
