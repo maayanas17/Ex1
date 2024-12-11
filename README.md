@@ -10,7 +10,7 @@ This project has 3 parts:
 2. **Functions: Ex1.java**
 
    - **`number2Int(String num)`**  
-     Converts a number in a string format (<number><b><base>) to decimal (int) format.  
+     Converts a number in a string format "(<number><b><base>)" to decimal (int) format.  
      If the string is not in a valid format, the function returns `-1`.
 
    - **`isNumber(String a)`**  
