@@ -28,7 +28,8 @@ public class Ex1Main {
             num2 = sc.next();
             if (!num2.equals("quit")) {
                 System.out.println("num2= "+num2+" is number: "+Ex1.isNumber(num2)+" , value: "+Ex1.number2Int(num2));
-                if(!Ex1.isNumber(num2)) {
+                if(!Ex1.isNumber(num2)) //If the format is incorrect, an error message is printed and the loop returns to the beginning.
+                {
                     System.out.println("ERR: num2 is in the wrong format! (" + num2 + ")");
                     continue;
                 }
@@ -41,11 +42,11 @@ public class Ex1Main {
                 System.out.println("ERR: wrong base, should be [2,16], got ("+base+")");
             else
             {
-                sum=Ex1.number2Int(num1)+Ex1.number2Int(num2);
-                mul=Ex1.number2Int(num1)*Ex1.number2Int(num2);
+                sum=Ex1.number2Int(num1)+Ex1.number2Int(num2);//sum
+                mul=Ex1.number2Int(num1)*Ex1.number2Int(num2);//mul
                 System.out.println(num1+" + "+num2+" = "+Ex1.int2Number(sum,base));
                 System.out.println(num1+" * "+num2+" = "+Ex1.int2Number(mul,base));
-                String [] arr={num1,num2,Ex1.int2Number(sum,base),Ex1.int2Number(mul,base)};
+                String [] arr={num1,num2,Ex1.int2Number(sum,base),Ex1.int2Number(mul,base)};//Creation of an array
                 System.out.println("Max number over ["+num1+","+num2+","+Ex1.int2Number(sum,base)+","+Ex1.int2Number(mul,base)+"] is: "+arr[Ex1.maxIndex(arr)]);
             }
         }
