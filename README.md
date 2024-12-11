@@ -12,24 +12,40 @@ This project has 3 parts:
    - **`number2Int(String num)`**  
      Converts a number in a string number format to decimal (int) format.  
      If the string is not in a valid format, the function returns `-1`.
+     Examples:
+     (1)Ex1.number2Int("21b3") , return 7
+     (2)Ex1.number2Int("10b"), return -1
 
    - **`isNumber(String a)`**  
      The function checks if the given string is in a valid number format.  
      The string should be in this format or only digits (therefore it is in base 10).
+     Examples:
+     (1)Ex1.isNumber("135bA"), return true
+     (2)Ex1.isNumber("0b1"), return false
 
    - **`int2Number(int num, int base)`**  
      Converts from an integer to a number format in the given selected base system (between 2 and 16).  
      If the number or base is invalid, the function returns an empty string.
-
+     Examples:
+     (1)Ex1.int2Number(11,2) , return "1011b2"
+     (2)Ex1.int2Number(15,1) , return ""
+     
    - **`maxIndex(String[] arr)`**  
      The function gets an array that contains strings in this number format or only digits (therefore in base 10)  
      and returns the index of the greatest number.  
      If none is valid, it returns `0`.
-
+     Examples:
+     (1)  for arr1 = {"111b2", "11", "23AbG", "9b10"}, return 2
+     (2) for arr5 = {null,"123bH"} , return 0
+     
    - **`equals(String n1, String n2)`**  
      The function gets 2 strings in this number format or only digits (therefore in base 10) or both  
      and returns `true` if both numbers are equal.  
      Otherwise, it returns `false`.
+     Examples:
+     (1) Ex1.equals("101b2","5") ' return true
+     (2) Ex1.equals("122b3","6611b7") , return false
+     (3) Ex1.equals("132b3","66b7") , return false
 
 3. **Main Code: Ex1.Main.java**
    - The program receives two numbers in string number format and checks that they are in a valid format.  
