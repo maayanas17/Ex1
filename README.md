@@ -40,7 +40,7 @@ This project has 3 parts:
      
    - **`equals(String n1, String n2)`**  
      The function gets 2 strings in this number format or only digits (therefore in base 10) or both  
-     and returns `true` if both numbers are equal.  
+     and returns `true` if both numbers are equal(if any of the inputs are invalid, it will return false).  
      Otherwise, it returns `false`.
      Examples:
      (1) Ex1.equals("101b2","5") ' return true
