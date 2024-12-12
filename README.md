@@ -6,19 +6,20 @@
    - After that, the program finds the largest number of the two numbers and the results of the sum and product using **`maxIndex(String[] arr)`** and **`number2Int(String num)`** functions , and displays it in the given base in the number format.  
    - The program runs until the user enters the word "quit", which means the program is terminated.
 ### A few examples:
-Enter a string as number#1 (or "quit" to end the program): 
-1DbG
-num1 = 1DbG is number: true, value: 29
+Enter a string as number#1 (or "quit" to end the program):  
+1DbG  
+num1 = 1DbG is number: true, value: 29  
 
-Enter a string as number#2 (or "quit" to end the program): 
-AAbB
-num2 = AAbB is number: true, value: 120
+Enter a string as number#2 (or "quit" to end the program):  
+AAbB  
+num2 = AAbB is number: true, value: 120  
 
-Enter a base for output: (a number [2,16]) 
-2
-1DbG + AAbB = 10010101b2
-1DbG * AAbB = 110110011000b2
-Max number over [1DbG, AAbB, 10010101b2, 110110011000b2] is: 110110011000b2
+Enter a base for output: (a number [2,16])  
+2  
+1DbG + AAbB = 10010101b2  
+1DbG * AAbB = 110110011000b2  
+Max number over [1DbG, AAbB, 10010101b2, 110110011000b2] is: 110110011000b2  
+
 
 
 Enter a string as number#1 (or "quit" to end the program):  
