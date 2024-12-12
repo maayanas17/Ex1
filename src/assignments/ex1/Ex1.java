@@ -15,7 +15,7 @@ public class Ex1 {
          * Convert the given number (num) to a decimal representation (as int).
          * It the given number is not in a valid format returns -1.
          * @param num a String representing a number in basis [2,16]
-         * @return
+         * @return the number in decimal format (int)
          */
         public static int number2Int(String num) {
             int base=10,indexLastChar,power,digit;// base is 10
@@ -42,7 +42,7 @@ public class Ex1 {
         /**
          * This static function checks if the given String (g) is in a valid "number" format.
          * @param a a String representing a number
-         * @return true iff the given String is in a number format
+         * @return true iff the given String is in a number format else return false
          */
         public static boolean isNumber(String a) {
             boolean ans = true;
@@ -120,6 +120,7 @@ public class Ex1 {
          * @param n1 first number
          * @param n2 second number
          * @return true iff the two numbers have the same values.
+         * the function return false if one or more of either numbers is invalid
          */
         public static boolean equals(String n1, String n2) {
             boolean ans = true;
