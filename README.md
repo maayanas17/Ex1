@@ -21,17 +21,18 @@ Enter a base for output: (a number [2,16])
 Max number over [1DbG, AAbB, 10010101b2, 110110011000b2] is: 110110011000b2
 
 
+Enter a string as number#1 (or "quit" to end the program):  
+12  
+num1 = 12 is number: true, value: 12  
 
-Ex1 class solution:
-Enter a string as number#1 (or "quit" to end the program): 
-12
-num1= 12 is number: true , value: 12
-Enter a string as number#2 (or "quit" to end the program): 
-10011b2
-num2= 10011b2 is number: true , value: 19
-Enter a base for output: (a number [2,16] 
-16
-12 + 10011b2 = 1FbG
-12 * 10011b2 = E4bG
-Max number over [12,10011b2,1FbG,E4bG] is: E4bG
+Enter a string as number#2 (or "quit" to end the program):  
+10011b2  
+num2 = 10011b2 is number: true, value: 19  
+
+Enter a base for output: (a number [2,16])  
+16  
+12 + 10011b2 = 1FbG  
+12 * 10011b2 = E4bG  
+Max number over [12, 10011b2, 1FbG, E4bG] is: E4bG  
+
 
